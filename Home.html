@@ -1,0 +1,275 @@
+<html>
+<head>
+<body bgcolor="#f5c9e3">
+<img src="SogieLogo.png" Height="80" Width="80" align="left"></img>
+<br>
+<div class="pill-nav">
+  <a class="active" href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Contact.Html">Contacts</a>
+ 
+</div>
+
+<style>
+
+
+.pill-nav a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  width:90;
+  
+}
+
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+
+.myDiv {
+  background-color: #EA5A52;
+  text-align: center;
+  height: 218;
+  width: 380;
+  padding: 1;
+}
+
+.myDiv2 {
+
+  background-color: #D4E95D;
+  text-align: center;
+  height: 170;
+  width: 380;
+  padding:1;
+}
+
+.myDiv3 {
+  background-color: #5DE96D;
+  text-align: center;
+  height: 220;
+  width: 380;
+  padding:1;
+}
+
+.myDiv4 {
+  background-color: #4857FF;
+  text-align: center;
+  height: 170;
+  width: 380;
+  padding:1;
+}
+
+.myDiv5 {
+  background-color: #965AF0;
+  text-align: center;
+  height: 190;
+  width: 380;
+  padding: 1;
+  }
+  
+header, body, footer {
+  font-family: Fantasy;
+  Margin: 5px;
+  }
+.nav {
+ background-color: #FFD9EC;
+ padding: 10px;
+ float: Right;
+ Font-Size: 16;
+
+ }
+ 
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+<br>
+
+<div class="slideshow-container">
+
+  
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Sogie1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Sogie2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Sogie4.jpg" style="width:100%">
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+
+<div class="myDiv">
+<h3> What is SOGIE?</h3>
+<p>Sexual Orientation, Gender Identity, and Expression (SOGIE) Information Webpage.
+ Everyone has a sexual orientation, gender identity, and expression (SOGIE). 
+ As such, each person's journey of self-awareness and expression is unique and individualized according to their culture, environment, and lived experiences.</p>
+</div>
+<br>
+<div class="myDiv2">
+<h3> What is Sogie bill?</h3>
+<p>The SOGIE Equality Bill recognizes that inequalities stemming from prejudice and discrimination exist for everyone, and disproportionately affect LGBTQIA+ individuals</p>
+</div> 
+<br>
+<div class="myDiv3">
+<h3>What is an example of gender expression?</h3>
+<p>Gender expression is how a person publicly expresses or presents their gender. This can include behaviour and outward appearance such as dress, hair, make-up, body language and voice. A person's chosen name and pronoun are also common ways of expressing gender.</p>
+</div> 
+<br>
+<div class="myDiv4">
+<h3>Is the sogie bill for everyone?</h3>
+<p>This bill also seeks to create an environment that is safe, equal, and reasonable for everyone regardless of their sexual orientation and gender identity or expression.</p>
+</div>
+ <br>
+<div class="myDiv5">
+<Font color="Red"><h3> #PassSogieBillNow</h3></Font>
+<p> We urge you to stop delaying equality.
+We call on the members of the Philippine Senate and House of Representatives to fulfill your obligation to “protect and enhance the right of all the people to human dignity,” working swiftly towards the passage of the SOGIE</p>
+</div>
+<h2> © 2024 Pride.me All Rights Reserved</h1>
+<br>
+</body>
+</html>
+</h2>
+</body>
